@@ -30,11 +30,13 @@ def gen_ts() -> None:
     # add new sr models here
     all_sr_models = [
         ModelType.RealESRGAN,
+        ModelType.DAT,
+        ModelType.HAT,
         ModelType.RealCUGAN,
         ModelType.EDSR,
         ModelType.SwinIR,
         ModelType.SCUNet,
-        ModelType.DAT,
+        ModelType.SRCNN
     ]
 
     for cfg in ConfigType:
