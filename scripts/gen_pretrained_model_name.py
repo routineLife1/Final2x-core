@@ -30,15 +30,17 @@ def gen_ts() -> None:
     # add new sr models here
     all_sr_models = [
         ModelType.RealESRGAN,
+        ModelType.DAT,
+        ModelType.HAT,
         ModelType.RealCUGAN,
         ModelType.EDSR,
         ModelType.SwinIR,
         ModelType.SCUNet,
-        ModelType.DAT,
+        ModelType.SRCNN,
     ]
 
-    for cfg in ConfigType:
-        for m in all_sr_models:
+    for m in all_sr_models:
+        for cfg in ConfigType:
             if cfg.startswith(m):
                 config_list.append(cfg)  # type: ignore
 
